@@ -1,0 +1,533 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    color: #293c31;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f0f5ec,
+            #dbe8d8
+        );
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.site-header {
+    padding:
+        25px 6%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background:
+        rgba(240, 245, 236, 0.92);
+
+    border-bottom:
+        1px solid
+        rgba(45, 70, 50, 0.1);
+
+    backdrop-filter: blur(10px);
+}
+
+.brand a {
+    font-size: 1.7rem;
+
+    font-weight: bold;
+
+    color: #31513c;
+}
+
+.navbar {
+    display: flex;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    position: relative;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 0.82rem;
+
+    color: #637265;
+}
+
+.navbar a.active,
+.navbar a:hover {
+    color: #31513c;
+}
+
+.navbar a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 100%;
+    height: 2px;
+
+    background: #7b9b76;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.plants-hero {
+    max-width: 900px;
+
+    margin: auto;
+
+    padding:
+        100px 25px
+        80px;
+
+    text-align: center;
+}
+
+.eyebrow {
+    margin-bottom: 16px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 0.72rem;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: #64875f;
+}
+
+.plants-hero h1 {
+    margin-bottom: 25px;
+
+    font-size:
+        clamp(
+            3rem,
+            8vw,
+            6rem
+        );
+
+    line-height: 1;
+
+    font-weight: 500;
+
+    color: #31513c;
+}
+
+.plants-hero h1 em {
+    display: block;
+
+    color: #8a7456;
+}
+
+.plants-hero > p:last-child {
+    max-width: 700px;
+
+    margin: auto;
+
+    line-height: 1.9;
+
+    color: #637064;
+}
+
+
+/* =========================================
+   FEATURE
+========================================= */
+
+.plant-feature {
+    max-width: 1100px;
+
+    margin:
+        0 auto
+        100px;
+
+    padding:
+        0 25px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.feature-image {
+    min-height: 450px;
+
+    padding: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 30px;
+
+    background:
+        #e6efe1;
+
+    box-shadow:
+        0 20px 40px
+        rgba(50, 80, 55, 0.12);
+}
+
+.feature-image img {
+    width: 85%;
+    height: 400px;
+
+    object-fit: contain;
+
+    transition:
+        transform 0.5s ease;
+}
+
+.feature-image:hover img {
+    transform:
+        scale(1.06)
+        rotate(2deg);
+}
+
+.feature-content h2 {
+    margin-bottom: 25px;
+
+    font-size:
+        clamp(
+            2.2rem,
+            5vw,
+            4rem
+        );
+
+    line-height: 1.1;
+
+    font-weight: 500;
+
+    color: #31513c;
+}
+
+.feature-content h2 em {
+    color: #8a7456;
+}
+
+.feature-content p:not(.eyebrow) {
+    margin-bottom: 20px;
+
+    line-height: 1.9;
+
+    color: #627066;
+}
+
+
+/* =========================================
+   GALLERY
+========================================= */
+
+.plant-gallery-section {
+    padding:
+        100px 6%
+        120px;
+
+    background:
+        rgba(255, 255, 255, 0.45);
+}
+
+.section-heading {
+    max-width: 750px;
+
+    margin:
+        0 auto
+        55px;
+
+    text-align: center;
+}
+
+.section-heading h2 {
+    margin-bottom: 15px;
+
+    font-size:
+        clamp(
+            2.2rem,
+            5vw,
+            4rem
+        );
+
+    line-height: 1.15;
+
+    font-weight: 500;
+
+    color: #31513c;
+}
+
+.section-heading h2 em {
+    color: #8a7456;
+}
+
+.section-heading > p:last-child {
+    color: #68766b;
+}
+
+
+/* =========================================
+   PLANT CARDS
+========================================= */
+
+.plant-gallery {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+.plant-card {
+    position: relative;
+
+    min-height: 300px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 22px;
+
+    background:
+        #edf3e9;
+
+    box-shadow:
+        0 12px 30px
+        rgba(50, 80, 55, 0.1);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.plant-card:hover {
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 20px 40px
+        rgba(50, 80, 55, 0.18);
+}
+
+.plant-card img {
+    width: 85%;
+    height: 250px;
+
+    object-fit: contain;
+
+    transition:
+        transform 0.5s ease;
+}
+
+.plant-card:hover img {
+    transform:
+        scale(1.12)
+        rotate(2deg);
+}
+
+.plant-label {
+    position: absolute;
+
+    left: 15px;
+    bottom: 15px;
+
+    padding:
+        7px 12px;
+
+    border-radius: 30px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 0.68rem;
+
+    letter-spacing: 1px;
+
+    background:
+        rgba(255, 255, 255, 0.82);
+
+    color: #49624c;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+    padding:
+        50px 20px;
+
+    text-align: center;
+
+    background: #31513c;
+
+    color: #eaf1e8;
+}
+
+.site-footer p {
+    margin-bottom: 12px;
+}
+
+.site-footer a {
+    font-family: Arial, sans-serif;
+
+    font-size: 0.8rem;
+
+    color: #d4e3d0;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+    .plant-gallery {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .plant-feature {
+        gap: 40px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .site-header {
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+    .navbar {
+        justify-content: center;
+
+        gap: 18px;
+    }
+
+    .plants-hero {
+        padding:
+            70px 20px
+            55px;
+    }
+
+    .plant-feature {
+        grid-template-columns: 1fr;
+
+        margin-bottom: 70px;
+
+        gap: 35px;
+    }
+
+    .feature-image {
+        min-height: 350px;
+    }
+
+    .feature-image img {
+        height: 320px;
+    }
+
+    .plant-gallery-section {
+        padding:
+            70px 18px
+            80px;
+    }
+
+    .plant-gallery {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 15px;
+    }
+
+    .plant-card {
+        min-height: 240px;
+    }
+
+    .plant-card img {
+        height: 200px;
+    }
+
+}
+
+
+@media (max-width: 430px) {
+
+    .plant-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .plant-card {
+        min-height: 300px;
+    }
+
+}

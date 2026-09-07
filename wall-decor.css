@@ -1,0 +1,516 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    color: #322e2b;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f5f1eb,
+            #e4ddd3
+        );
+
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.site-header {
+    position: relative;
+
+    z-index: 10;
+
+    padding:
+        25px 6%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background:
+        rgba(245, 241, 235, 0.92);
+
+    border-bottom:
+        1px solid
+        rgba(60, 50, 40, 0.1);
+
+    backdrop-filter: blur(12px);
+}
+
+.brand a {
+    font-size: 1.7rem;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    color: #4b4945;
+}
+
+.navbar {
+    display: flex;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    position: relative;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 0.82rem;
+
+    color: #6e6861;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #393632;
+}
+
+.navbar a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 100%;
+    height: 2px;
+
+    background: #8a7865;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.decor-hero {
+    max-width: 900px;
+
+    margin: auto;
+
+    padding:
+        100px 25px
+        90px;
+
+    text-align: center;
+}
+
+.eyebrow {
+    margin-bottom: 16px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 0.72rem;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: #89745f;
+}
+
+.decor-hero h1 {
+    margin-bottom: 25px;
+
+    font-size:
+        clamp(
+            3rem,
+            8vw,
+            6rem
+        );
+
+    line-height: 1;
+
+    font-weight: 500;
+
+    color: #48443f;
+}
+
+.decor-hero h1 em {
+    display: block;
+
+    color: #8a6f54;
+}
+
+.decor-hero > p:last-child {
+    max-width: 700px;
+
+    margin: auto;
+
+    line-height: 1.9;
+
+    color: #6c665f;
+}
+
+
+/* =========================================
+   DECOR ROWS
+========================================= */
+
+.decor-row {
+    max-width: 1200px;
+
+    margin:
+        0 auto
+        100px;
+
+    padding:
+        0 25px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1.25fr;
+
+    gap: 65px;
+
+    align-items: center;
+}
+
+.decor-row.reverse {
+    grid-template-columns:
+        1.25fr
+        1fr;
+}
+
+.decor-row.reverse
+.decor-image {
+    order: 2;
+}
+
+.decor-row.reverse
+.decor-text {
+    order: 1;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.decor-image {
+    min-height: 420px;
+
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    background:
+        #e9e2d9;
+
+    box-shadow:
+        0 20px 45px
+        rgba(60, 50, 40, 0.15);
+}
+
+.decor-image img {
+    width: 100%;
+
+    height: 420px;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.6s ease;
+}
+
+.decor-image:hover img {
+    transform:
+        scale(1.06);
+}
+
+
+/* =========================================
+   TEXT
+========================================= */
+
+.decor-text {
+    padding: 20px;
+}
+
+.chapter-number {
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 0.7rem;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    color: #9a8065;
+}
+
+.decor-text h2 {
+    margin-bottom: 25px;
+
+    font-size:
+        clamp(
+            2.2rem,
+            5vw,
+            4rem
+        );
+
+    line-height: 1.1;
+
+    font-weight: 500;
+
+    color: #48443f;
+}
+
+.decor-text p {
+    margin-bottom: 20px;
+
+    line-height: 1.9;
+
+    color: #6c665f;
+}
+
+
+/* =========================================
+   QUOTE
+========================================= */
+
+.decor-quote {
+    min-height: 450px;
+
+    padding:
+        90px 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(72, 68, 63, 0.88),
+            rgba(72, 68, 63, 0.88)
+        ),
+        url("assets/heartback.png")
+        center / cover;
+}
+
+.decor-quote h2 {
+    max-width: 800px;
+
+    margin:
+        10px auto
+        15px;
+
+    font-size:
+        clamp(
+            2.5rem,
+            6vw,
+            5rem
+        );
+
+    line-height: 1.05;
+
+    font-weight: 500;
+
+    color: white;
+}
+
+.decor-quote h2 em {
+    color: #ddc5a6;
+}
+
+.decor-quote > p:last-child {
+    font-size: 1.15rem;
+
+    font-style: italic;
+
+    color: #ddd3c7;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+    padding:
+        55px 20px
+        35px;
+
+    text-align: center;
+
+    background: #35322e;
+
+    color: #f1ece5;
+}
+
+.site-footer h2 {
+    margin-bottom: 10px;
+
+    font-size: 1.8rem;
+}
+
+.site-footer > p {
+    color: #cfc7bd;
+}
+
+.footer-links {
+    margin:
+        30px 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+}
+
+.footer-links a {
+    font-family: Arial, sans-serif;
+
+    font-size: 0.78rem;
+
+    color: #d8d0c6;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+    .decor-row,
+    .decor-row.reverse {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        margin-bottom: 80px;
+    }
+
+    .decor-row.reverse
+    .decor-image,
+    .decor-row.reverse
+    .decor-text {
+        order: initial;
+    }
+
+    .decor-image {
+        min-height: 380px;
+    }
+
+    .decor-image img {
+        height: 380px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .site-header {
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+    .navbar {
+        justify-content: center;
+
+        gap: 18px;
+    }
+
+    .decor-hero {
+        padding:
+            70px 20px
+            65px;
+    }
+
+    .decor-row,
+    .decor-row.reverse {
+        padding:
+            0 18px;
+
+        gap: 25px;
+
+        margin-bottom: 65px;
+    }
+
+    .decor-image,
+    .decor-image img {
+        height: 320px;
+
+        min-height: 320px;
+    }
+
+    .decor-text {
+        padding: 5px;
+    }
+
+    .decor-quote {
+        min-height: 370px;
+
+        padding:
+            70px 20px;
+    }
+
+}
